@@ -1,0 +1,18 @@
+
+CREATE or REPLACE PROCEDURE abc (pn NUMBER) AS
+	CURSOR ec IS SELECT * FROM works_on WHERE pno = pn;
+	n ec%ROWTYPE;
+	hour EXCEPTION;
+BEGIN
+	FOR n IN ec LOOP
+		IF n.hours < 8.0 THEN 
+			RAISE hour;
+		END IF;
+		DBMS_OUTPUT.PUT_LINE(n.essn || ' ' ||n.hours);
+		END LOOP;
+
+EXCEPTION
+		WHEN hour THEN 
+			DBMS_OUTPUT.PUT_LINE('SHOULD WORK LONGER');
+END;
+/

@@ -1,0 +1,22 @@
+DROP TABLE player;
+DROP TABLE company;
+DROP TABLE Player_Nat;
+DROP TABLE sponsors;
+
+CREATE TABLE player(
+PIDnum 		VARCHAR2(11) PRIMARY KEY,
+Lname 		VARCHAR2(15) NOT NULL,
+Fname		VARCHAR2(15) NOT NULL,
+Squad_num	INT	NOT NULL,
+TeamName	VARCHAR2(15));
+
+
+CREATE TABLE company(
+CompanyName	VARCHAR2(15) PRIMARY KEY,
+ProductType	VARCHAR2(15));
+
+CREATE sponsors(
+CompanyName	VARCHAR2(15) PRIMARY KEY,
+TeamName	VARCHAR2(15),
+Funds		INT,
+)

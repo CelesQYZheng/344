@@ -1,0 +1,44 @@
+VENUE (TeamName, VenueName, Location, Capacity)
+Step 1: 1NF
+All attributes are atomic
+Step 2: 2NF
+Only one primary key so already in 2NF
+Step 3: 3NF
+Transitive dependencies between Location + Capacity, VenueName, and TeamName.
+Create new VENUE_DETAILS table
+VENUE(TeamName, VenueName)
+VENUE_DETAILS(VenueName, Location, Capacity)
+Step 4: BCNF
+Only one PK in each table so already in BCNF
+
+
+REFEREE (Ref_ID, Fname, Lname, Birthdate, StartDate)
+Step 1: 1NF
+All attributes are atomic
+Step 2: 2NF
+Only one PK so already in 2NF
+Step 3: 3NF
+There are no transitive dependencies as all non-key attributes are only dependent on the PK
+Step 4: BCNF
+Already in BCNF as PK is not a composite key
+
+GAME (Game_ID, Home, Away, Date, HomeScore, AwayScore)
+Step 1: 1NF 
+All attributes are atomic, there will only be one home team and home score, and one away team and away score. 
+Step 2: 2NF 
+Only one primary key so already in 2NF.
+Step 3: 3NF 
+The relation is in 3NF.
+Step 4:
+The relation is in BCNF
+
+FAN (Fan_ID, First_name, Last_name, Address, Birth_date)
+Step 1: 1NF 
+All attributes are already atomic and can only be uniquely identified by the primary key. A fan can only have one birthdate, address, first name, and last name.
+Step 2: 2NF 
+All attributes are already functionally dependent. All attributes are non-prime apart from the singular primary key. 
+Step 3: 3NF 
+There are no transitive dependencies as all keys are only dependent on the primary key. 
+Step 4: BCNF 
+The relation is in BCNF.
+
